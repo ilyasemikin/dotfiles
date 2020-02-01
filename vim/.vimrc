@@ -18,6 +18,12 @@ augroup resCur
 	autocmd BufReadPost * call setpos(".", getpos("'\""))
 augroup END
 
+" YCM standard config file
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+map <C-@> :YcmCompleter FixIt<CR>
+
 " Vundle block
 set nocompatible
 filetype off
@@ -33,7 +39,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-nerdtree/nerdtree'
 
 " Autocomplete
-Plugin 'xavierd/clang_complete'
+Plugin 'ycm-core/YouCompleteMe'
 
 " Syntax highlights
 Plugin 'tikhomirov/vim-glsl'
