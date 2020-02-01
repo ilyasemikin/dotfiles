@@ -1,0 +1,7 @@
+# i3blocks config
+
+# global settings
+command=~/.config/i3blocks/blocks/$BLOCK_NAME/$BLOCK_NAME
+
+[datetime]
+interval=1
