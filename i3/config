@@ -26,7 +26,7 @@ set_from_resource $bg i3.bgrnd #000000
 set_from_resource $fg i3.fgrnd #FFFFFF
 set_from_resource $in i3.inact #676E7D 
 set_from_resource $ur i3.urgen #E53935
-set_from_resource $tr i3.trans D0
+set_from_resource $tr i3.trans C8
 
 # ----------------------------------------------------------------------------------
 # Key bindings
@@ -190,7 +190,7 @@ bar {
 # ----------------------------------------------------------------------------------
 
 # Only for laptop
-# exec --no-startup-id synclient TapButton1=1 TapButton2=3 TapButton3=2 HorizTwoFingerScroll=1
+exec --no-startup-id synclient TapButton1=1 TapButton2=3 TapButton3=2 HorizTwoFingerScroll=1
 
 # feh: set background image
 exec feh --bg-center $bgr_image
