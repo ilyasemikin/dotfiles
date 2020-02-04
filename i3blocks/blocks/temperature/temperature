@@ -1,0 +1,24 @@
+#!/bin/bash
+
+temperature=`sensors | grep "Package id 0" | grep -Po "([0-9]+\.[0-9])" | head -n 1`
+icon=
+color="#FFFFFF"
+
+if (( $temperature > 80 ))
+then
+	icon=
+	color="#FF0000"
+elif (( $temperature > 60 ))
+then
+	icon=
+elif (( $temperature > 40 ))
+then
+	icon=
+fi
+
+# Full text
+echo "$icon $temperature"
+# Short text
+echo "$icon $temperature"
+# Color
+echo "$color"

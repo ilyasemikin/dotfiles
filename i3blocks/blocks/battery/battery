@@ -1,0 +1,43 @@
+#!/bin/bash
+
+acpi_output=`acpi`
+percent_str=`echo $acpi_output | grep -Po "([0-9]+%)"`
+percent=${percent_str::-1}
+status_bat=`echo $acpi_output | awk -F",| " '{ print $3 }'`
+
+icon=
+color="#FFFFFF"
+
+if [ "$status_bat" = "Charging" ]
+then
+	icon=
+	color=#00FFFF
+else
+	if (( percent >= 95 ))
+	then
+		icon=
+		color="#00FF00"
+	elif (( percent >= 90 )) 
+	then
+		icon=
+	elif (( percent >= 70  ))
+	then
+		icon=
+	elif (( percent >= 45 ))
+	then
+		icon=
+	elif (( percent >= 20 ))
+	then
+		:
+	else
+		icon=
+		color="#FF0000"
+	fi
+fi
+
+# Full text
+echo "$icon $percent_str"
+# Short text
+echo "$icon $percent_str"
+# Color
+echo "$color"

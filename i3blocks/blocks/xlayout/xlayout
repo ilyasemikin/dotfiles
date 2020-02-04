@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# layout - program which diplay current layout
+layout=`~/.config/i3blocks/blocks/xlayout/curlayout`
+
+# Full text
+echo " $layout"
+# Short text
+echo " $layout"
+# Color 
+echo "#FFFFFF"

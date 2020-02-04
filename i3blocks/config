@@ -3,5 +3,26 @@
 # global settings
 command=~/.config/i3blocks/blocks/$BLOCK_NAME/$BLOCK_NAME
 
+[memusage]
+interval=10
+min_width=120
+
+[cpuusage]
+interval=1
+min_width=80
+LABEL= 
+
+[temperature]
+interval=1
+min_width=55
+
+[battery]
+interval=1
+min_width=60
+
+[xlayout]
+interval=1
+min_width=40
+
 [datetime]
 interval=1

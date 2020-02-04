@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# mem_usage - program which display memory usage
+mem_usage=`~/.config/i3blocks/blocks/memusage/mem_usage`
+
+# Full text
+echo " $mem_usage"
+# Short text
+echo " $mem_usage"
+# Color
+echo "#FFFFFF"
