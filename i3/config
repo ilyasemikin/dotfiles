@@ -19,7 +19,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Background image
-set $bgr_image ~/.config/fon.jpg
+set $bgr_folder ~/.wallpapers
 
 # Bar colors
 set_from_resource $bg i3.bgrnd #000000
@@ -121,7 +121,19 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+# resize button
 bindsym $mod+r mode "resize"
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Backlight controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # ----------------------------------------------------------------------------------
 # Workspaces key bindings
@@ -174,7 +186,7 @@ gaps outer 0
 bar {
         status_command i3blocks
 	i3bar_command i3bar -t
-	font pango:Input Sans 11
+	font pango:Input Sans, FontAwesome 9
 	colors {
 		background $bg$tr
 		separator $in
@@ -193,7 +205,7 @@ bar {
 exec --no-startup-id synclient TapButton1=1 TapButton2=3 TapButton3=2 HorizTwoFingerScroll=1
 
 # feh: set background image
-exec feh --bg-center $bgr_image
+exec feh --bg-center --randomize --recursive $bgr_folder/*
 
 # Change keymap
 exec --no-startup-id setxkbmap -layout 'us,ru' -option grp:alt_shift_toggle
