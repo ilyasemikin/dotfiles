@@ -8,8 +8,8 @@ set $mod Mod4
 
 # Workspace names
 set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
+set $ws2 "2. Code"
+set $ws3 "3. Browser"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -17,6 +17,9 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# Screenshots folder
+set $screens_folder ~/Screenshot
 
 # Background image
 set $bgr_folder ~/.wallpapers
@@ -121,8 +124,12 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-# resize button
+# resize window button
 bindsym $mod+r mode "resize"
+
+# Print screen
+bindsym $mod+Print exec flameshot gui --path $screens_folder
+bindsym Print exec flameshot full --path $screens_folder
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -217,3 +224,6 @@ exec --no-startup-id setxkbmap -layout 'us,ru' -option grp:alt_shift_toggle
 
 # Start compositor
 exec --no-startup-id picom
+
+# Start locker
+exec --no-startup-id light-locker
