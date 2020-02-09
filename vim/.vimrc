@@ -12,6 +12,9 @@ let NERDTreeQuitOnOpen=1
 
 set number
 
+" For lightline
+set laststatus=2
+
 " Save cursor position
 augroup resCur
 	autocmd!
@@ -37,6 +40,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'vim-nerdtree/nerdtree'
+Plugin 'itchyny/lightline.vim'
 
 " Autocomplete
 Plugin 'ycm-core/YouCompleteMe'
