@@ -1,4 +1,5 @@
 [Configuration]
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -25,12 +26,15 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
-MiscShowUnsafePasteDialog=TRUE
+MiscShowUnsafePasteDialog=FALSE
+BackgroundDarkness=0.750000
+FontName=Input Mono Narrow Semi-Condensed 11
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
-BackgroundDarkness=0.800000
-TitleMode=TERMINAL_TITLE_REPLACE
-FontName=Input Mono 11
-ShortcutsNoHelpkey=TRUE
+Encoding=UTF-8
 ShortcutsNoMenukey=TRUE
+ShortcutsNoMnemonics=TRUE
+ShortcutsNoHelpkey=TRUE
+ColorForeground=#eeeeeeeeecec
+ColorBackground=#000000000000
+TabActivityColor=#aaaa00000000
 
